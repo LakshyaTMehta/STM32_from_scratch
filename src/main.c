@@ -15,10 +15,13 @@ int main(void)
   *stmreg = 0UL;
   *stmreg |= (1UL << 3);
 
-  /* set gpio mode as output for pin 12 */
+  /* set gpio mode as output for pin 12, 13, 14 and 15 */
   stmreg = (uint32_t*) GPIOD_MODER;
   *stmreg = 0UL;
   *stmreg |= (1UL << (12 * 2));
+  *stmreg |= (1UL << (13 * 2));
+  *stmreg |= (1UL << (14 * 2));
+  *stmreg |= (1UL << (15 * 2));
 
   /* pointing to Output data register */
   stmreg = (uint32_t*) GPIOD_ODR;
@@ -28,7 +31,11 @@ int main(void)
   {
     *stmreg = (1UL << 12); 
     for(int i = 0; i < 0xFFFFUL; i++);
-    *stmreg = 0UL;
+    *stmreg = (1UL << 13);
+    for(int i = 0; i < 0xFFFFUL; i++);
+    *stmreg = (1UL << 14);
+    for(int i = 0; i < 0xFFFFUL; i++);
+    *stmreg = (1UL << 15);
     for(int i = 0; i < 0xFFFFUL; i++);
   }
 

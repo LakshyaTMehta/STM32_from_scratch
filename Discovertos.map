@@ -15,130 +15,130 @@ LOAD build/startup.o
                 0x00000400                        __max_heap_size = 0x400
                 0x00000200                        __msx_stack_size = 0x200
 
-.text           0x08000000      0x2c8
+.text           0x08000000      0x328
  *(.isr_vector)
  .isr_vector    0x08000000      0x188 build/startup.o
                 0x08000000                pul_VECTOR_TABLE
  *(.text)
- .text          0x08000188       0xa8 build/main.o
+ .text          0x08000188      0x108 build/main.o
                 0x08000188                main
- .text          0x08000230       0x98 build/startup.o
-                0x08000230                Reset_Handler
-                0x080002c0                FLASH_Handler
-                0x080002c0                SVCall_Handler
-                0x080002c0                CAN2_Rx0_Handler
-                0x080002c0                DMA2_Stream7_Handler
-                0x080002c0                OTG_HS_Handler
-                0x080002c0                HardFault_Handler
-                0x080002c0                DMA2_Stream3_Handler
-                0x080002c0                SysTick_Handler
-                0x080002c0                TIM_CC_Handler
-                0x080002c0                USART3_Handler
-                0x080002c0                PendSV_Handler
-                0x080002c0                NMI_Handler
-                0x080002c0                TIM6_DAC_Handler
-                0x080002c0                EXTI15_10_Handler
-                0x080002c0                ADC_Handler
-                0x080002c0                HASH_RNG_Handler
-                0x080002c0                I2C1_EV_Handler
-                0x080002c0                WWDG
-                0x080002c0                TAMP_STAMP_Handler
-                0x080002c0                I2C3_ER_Handler
-                0x080002c0                EXTI4_Handler
-                0x080002c0                I2C3_EV_Handler
-                0x080002c0                DMA1_Stream1_Handler
-                0x080002c0                DMA2_Stream4_Handler
-                0x080002c0                DMA1_Stream7_Handler
-                0x080002c0                OTG_FS_Handler
-                0x080002c0                ETH_WKUP_Handler
-                0x080002c0                TIM1_BRK_TIM9_Handler
-                0x080002c0                I2C1_ER_Handler
-                0x080002c0                DMA1_Stream3_Handler
-                0x080002c0                UsageFault_Handler
-                0x080002c0                TIM1_UP_TIM10_Handler
-                0x080002c0                I2C2_ER_Handler
-                0x080002c0                USART6_Handler
-                0x080002c0                TIM8_CC_Handler
-                0x080002c0                CAN1_SCE_Handler
-                0x080002c0                DMA1_Stream0_Handler
-                0x080002c0                OTG_HS_EP1_OUT_Handler
-                0x080002c0                FSMC_Handler
-                0x080002c0                CAN1_Tx_Handler
-                0x080002c0                EXTI1_Handler
-                0x080002c0                RTC_WKUP_Handler
-                0x080002c0                EXTI3_Handler
-                0x080002c0                CAN2_Rx1_Handler
-                0x080002c0                CRYP_Handler
-                0x080002c0                EXTI2_Handler
-                0x080002c0                UART4_Handler
-                0x080002c0                TIM2_Handler
-                0x080002c0                USART1_Handler
-                0x080002c0                CAN2_SCE_Handler
-                0x080002c0                TIM3_Handler
-                0x080002c0                DMA2_Stream6_Handler
-                0x080002c0                Default_Handler
-                0x080002c0                DCMI_Handler
-                0x080002c0                TIM1_TRG_COM_TIM11_Handler
-                0x080002c0                EXTI_9_5_Handler
-                0x080002c0                RTC_Alarm_Handler
-                0x080002c0                TIM4_Handler
-                0x080002c0                TIM8_UP_TIM13_Handler
-                0x080002c0                SPI2_Handler
-                0x080002c0                DMA2_Stream1_Handler
-                0x080002c0                DMA1_Stream2_Handler
-                0x080002c0                MemManage_Handler
-                0x080002c0                EXTI0_Handler
-                0x080002c0                TIM8_BRK_TIM12_Handler
-                0x080002c0                DMA2_Stream5_Handler
-                0x080002c0                CAN2_Tx_Handler
-                0x080002c0                DMA1_Stream6_Handler
-                0x080002c0                SDIO_Handler
-                0x080002c0                USART2_Handler
-                0x080002c0                ETH_Handler
-                0x080002c0                SPI1_Handler
-                0x080002c0                I2C2_EV_Handler
-                0x080002c0                DMA2_Stream2_Handler
-                0x080002c0                SPI3_Handler
-                0x080002c0                DMA2_Stream0_Handler
-                0x080002c0                RCC_Handler
-                0x080002c0                CAN1_Rx0_Handler
-                0x080002c0                PVD_Handler
-                0x080002c0                UART5_Handler
-                0x080002c0                DMA1_Stream5_Handler
-                0x080002c0                TIM5_Handler
-                0x080002c0                TIM7_Handler
-                0x080002c0                TIM8_TRG_COM_TIM14_Handler
-                0x080002c0                FPU_Handler
-                0x080002c0                BusFault_Handler
-                0x080002c0                CAN1_Rx1_Handler
-                0x080002c0                DMA1_Stream4_Handler
-                0x080002c0                DebugMonitor_Handler
-                0x080002c0                OTG_HS_WKUP_Handler
-                0x080002c0                OTG_FS_WKUP_Handler
-                0x080002c0                OTG_HS_EP1_IN_Handler
+ .text          0x08000290       0x98 build/startup.o
+                0x08000290                Reset_Handler
+                0x08000320                FLASH_Handler
+                0x08000320                SVCall_Handler
+                0x08000320                CAN2_Rx0_Handler
+                0x08000320                DMA2_Stream7_Handler
+                0x08000320                OTG_HS_Handler
+                0x08000320                HardFault_Handler
+                0x08000320                DMA2_Stream3_Handler
+                0x08000320                SysTick_Handler
+                0x08000320                TIM_CC_Handler
+                0x08000320                USART3_Handler
+                0x08000320                PendSV_Handler
+                0x08000320                NMI_Handler
+                0x08000320                TIM6_DAC_Handler
+                0x08000320                EXTI15_10_Handler
+                0x08000320                ADC_Handler
+                0x08000320                HASH_RNG_Handler
+                0x08000320                I2C1_EV_Handler
+                0x08000320                WWDG
+                0x08000320                TAMP_STAMP_Handler
+                0x08000320                I2C3_ER_Handler
+                0x08000320                EXTI4_Handler
+                0x08000320                I2C3_EV_Handler
+                0x08000320                DMA1_Stream1_Handler
+                0x08000320                DMA2_Stream4_Handler
+                0x08000320                DMA1_Stream7_Handler
+                0x08000320                OTG_FS_Handler
+                0x08000320                ETH_WKUP_Handler
+                0x08000320                TIM1_BRK_TIM9_Handler
+                0x08000320                I2C1_ER_Handler
+                0x08000320                DMA1_Stream3_Handler
+                0x08000320                UsageFault_Handler
+                0x08000320                TIM1_UP_TIM10_Handler
+                0x08000320                I2C2_ER_Handler
+                0x08000320                USART6_Handler
+                0x08000320                TIM8_CC_Handler
+                0x08000320                CAN1_SCE_Handler
+                0x08000320                DMA1_Stream0_Handler
+                0x08000320                OTG_HS_EP1_OUT_Handler
+                0x08000320                FSMC_Handler
+                0x08000320                CAN1_Tx_Handler
+                0x08000320                EXTI1_Handler
+                0x08000320                RTC_WKUP_Handler
+                0x08000320                EXTI3_Handler
+                0x08000320                CAN2_Rx1_Handler
+                0x08000320                CRYP_Handler
+                0x08000320                EXTI2_Handler
+                0x08000320                UART4_Handler
+                0x08000320                TIM2_Handler
+                0x08000320                USART1_Handler
+                0x08000320                CAN2_SCE_Handler
+                0x08000320                TIM3_Handler
+                0x08000320                DMA2_Stream6_Handler
+                0x08000320                Default_Handler
+                0x08000320                DCMI_Handler
+                0x08000320                TIM1_TRG_COM_TIM11_Handler
+                0x08000320                EXTI_9_5_Handler
+                0x08000320                RTC_Alarm_Handler
+                0x08000320                TIM4_Handler
+                0x08000320                TIM8_UP_TIM13_Handler
+                0x08000320                SPI2_Handler
+                0x08000320                DMA2_Stream1_Handler
+                0x08000320                DMA1_Stream2_Handler
+                0x08000320                MemManage_Handler
+                0x08000320                EXTI0_Handler
+                0x08000320                TIM8_BRK_TIM12_Handler
+                0x08000320                DMA2_Stream5_Handler
+                0x08000320                CAN2_Tx_Handler
+                0x08000320                DMA1_Stream6_Handler
+                0x08000320                SDIO_Handler
+                0x08000320                USART2_Handler
+                0x08000320                ETH_Handler
+                0x08000320                SPI1_Handler
+                0x08000320                I2C2_EV_Handler
+                0x08000320                DMA2_Stream2_Handler
+                0x08000320                SPI3_Handler
+                0x08000320                DMA2_Stream0_Handler
+                0x08000320                RCC_Handler
+                0x08000320                CAN1_Rx0_Handler
+                0x08000320                PVD_Handler
+                0x08000320                UART5_Handler
+                0x08000320                DMA1_Stream5_Handler
+                0x08000320                TIM5_Handler
+                0x08000320                TIM7_Handler
+                0x08000320                TIM8_TRG_COM_TIM14_Handler
+                0x08000320                FPU_Handler
+                0x08000320                BusFault_Handler
+                0x08000320                CAN1_Rx1_Handler
+                0x08000320                DMA1_Stream4_Handler
+                0x08000320                DebugMonitor_Handler
+                0x08000320                OTG_HS_WKUP_Handler
+                0x08000320                OTG_FS_WKUP_Handler
+                0x08000320                OTG_HS_EP1_IN_Handler
  *(.rodata)
-                0x080002c8                        . = ALIGN (0x4)
-                0x080002c8                        _etext = .
+                0x08000328                        . = ALIGN (0x4)
+                0x08000328                        _etext = .
 
-.glue_7         0x080002c8        0x0
- .glue_7        0x080002c8        0x0 linker stubs
+.glue_7         0x08000328        0x0
+ .glue_7        0x08000328        0x0 linker stubs
 
-.glue_7t        0x080002c8        0x0
- .glue_7t       0x080002c8        0x0 linker stubs
+.glue_7t        0x08000328        0x0
+ .glue_7t       0x08000328        0x0 linker stubs
 
-.vfp11_veneer   0x080002c8        0x0
- .vfp11_veneer  0x080002c8        0x0 linker stubs
+.vfp11_veneer   0x08000328        0x0
+ .vfp11_veneer  0x08000328        0x0 linker stubs
 
-.v4_bx          0x080002c8        0x0
- .v4_bx         0x080002c8        0x0 linker stubs
+.v4_bx          0x08000328        0x0
+ .v4_bx         0x08000328        0x0 linker stubs
 
-.iplt           0x080002c8        0x0
- .iplt          0x080002c8        0x0 build/startup.o
+.iplt           0x08000328        0x0
+ .iplt          0x08000328        0x0 build/startup.o
 
-.rel.dyn        0x080002c8        0x0
- .rel.iplt      0x080002c8        0x0 build/startup.o
+.rel.dyn        0x08000328        0x0
+ .rel.iplt      0x08000328        0x0 build/startup.o
 
-.data           0x20000000        0x0 load address 0x080002c8
+.data           0x20000000        0x0 load address 0x08000328
                 0x20000000                        _sdata = .
  *(.data)
  .data          0x20000000        0x0 build/main.o
@@ -146,10 +146,10 @@ LOAD build/startup.o
                 0x20000000                        . = ALIGN (0x4)
                 0x20000000                        _edata = .
 
-.igot.plt       0x20000000        0x0 load address 0x080002c8
+.igot.plt       0x20000000        0x0 load address 0x08000328
  .igot.plt      0x20000000        0x0 build/startup.o
 
-.bss            0x20000000        0x0 load address 0x080002c8
+.bss            0x20000000        0x0 load address 0x08000328
                 0x20000000                        _sbss = .
  *(.bss)
  .bss           0x20000000        0x0 build/main.o
