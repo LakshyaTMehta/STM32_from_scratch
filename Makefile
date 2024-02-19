@@ -37,4 +37,4 @@ $(BUILDIR)/%.o : $(SRCDIR)/%.c
 nm : $(BUILDIR)/$(PROJ).elf
 	$(NM) $^
 objdump : $(BUILDIR)/$(PROJ).elf
-	$(OD) -h $^
+	$(OD) -s $^

@@ -1,4 +1,5 @@
 #include <stdint.h>
+#include <main.h>
 
 
 #define SRAM_START (0x20000000U)
@@ -6,6 +7,8 @@
 #define SRAM_END (SRAM_START + SRAM_SIZE)
 
 #define STACK_START SRAM_END
+
+extern uint32_t *_etext, *_sdata, *_edata, *_sbss, *_ebss;
 
 void Default_Handler(void);
 void Reset_Handler(void);
@@ -205,7 +208,22 @@ uint32_t pul_VECTOR_TABLE[] __attribute__((section(".isr_vector")))= {
 
 void Reset_Handler(void)
 {
-  /* Call main() */
+  uint32_t* src = _etext;
+  uint32_t* dst = _sdata;
+  uint32_t uldata_size = (&_edata - &_sdata);
+  for(int i = 0; i < uldata_size; i++)
+  {
+    *dst++ = *src++;
+  }
+  uldata_size = &_ebss - &_sbss;
+  dst = _sbss;
+  for(int i = 0; i < uldata_size; i++)
+  {
+    *dst++ = 0;
+  }
+
+  main();
+  
 }
 
 void Default_Handler(void)
